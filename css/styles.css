@@ -1,0 +1,651 @@
+/* 1. ЗМІННІ ТА СКИДАННЯ */
+:root {
+    --color-text: #333;
+    --color-muted: #666;
+    --color-border: #333;
+    --color-line: #ccc;
+    --color-bg: #fff;
+    --color-link: #2a6eb5;
+    --gap: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-text);
+    background-color: #f0f0f0;
+    padding: var(--gap);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+a {
+    color: var(--color-link);
+}
+
+mark {
+    background-color: #333;
+    color: #fff;
+    padding: 2px 6px;
+}
+
+/* 2. КОНТЕЙНЕР СТОРІНКИ */
+.page {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    margin-bottom: 60px; /* Відступ знизу для кнопки "вгору" */
+}
+
+/*  3. ШАПКА  */
+.header {
+    padding: var(--gap);
+    border-bottom: 2px solid var(--color-border);
+    text-align: center;
+}
+
+.header_title {
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: var(--color-text);
+}
+
+/* 4. НАВІГАЦІЯ */
+.nav_list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav_item {
+    padding: 0 18px;
+    border-left: 1px solid var(--color-border);
+}
+
+.nav_item:last-child {
+    border-right: 1px solid var(--color-border);
+}
+
+.nav_link {
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: bold;
+}
+
+.nav_link:hover {
+    color: var(--color-link);
+    text-decoration: underline;
+}
+
+/* 5. СЕКЦІЇ */
+.section {
+    padding: var(--gap);
+    text-align: center;
+}
+
+.section_title {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: var(--gap);
+    letter-spacing: 1px;
+}
+
+.section_content {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Горизонтальна лінія-розділювач */
+.divider {
+    margin: 0;
+    border: 0;
+    border-top: 1px solid var(--color-line);
+}
+
+/* 6. ПОРТРЕТ */
+.portrait {
+    float: left;
+    margin: 0 20px 15px 0;
+    text-align: center;
+    max-width: 220px;
+}
+
+.portrait_img {
+    border: 1px solid var(--color-line);
+}
+
+.portrait_caption {
+    font-size: 12px;
+    color: var(--color-muted);
+    margin-top: 6px;
+    font-style: italic;
+}
+
+/* 7. ЦИТАТА */
+.quote {
+    clear: both;
+    margin: 20px 0;
+    padding: 12px 20px;
+    border-left: 4px solid var(--color-border);
+    background-color: #fafafa;
+    font-style: italic;
+}
+
+.quote cite {
+    display: block;
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--color-muted);
+    font-style: normal;
+}
+
+/* 8. ТАБЛИЦЯ */
+.dates-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.dates-table caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.dates-table th, .dates-table td {
+    border: 1px solid var(--color-border);
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.dates-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+/* 9. СПИСКИ */
+.awards-list,
+.facts-list {
+    margin: 10px 0 20px 25px;
+}
+
+.awards-list li,
+.facts-list li {
+    margin-bottom: 6px;
+}
+
+/* 10. БІЧНА ПРИМІТКА */
+.aside-note {
+    border: 1px solid var(--color-line);
+    background-color: #fafafa;
+    padding: 12px 15px;
+    margin: 15px 0;
+}
+
+.aside-note h4 {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.external-links {
+    margin-top: 15px;
+}
+
+/*  11. ПІДВАЛ */
+.footer {
+    padding: 15px;
+    border-top: 2px solid var(--color-border);
+    text-align: center;
+}
+
+.footer_list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 13px;
+}
+
+.footer_item {
+    padding: 0 15px;
+    border-left: 1px solid var(--color-border);
+}
+
+.footer_item:first-child {
+    border-left: 0;
+}
+
+/* 12. SKIP-LINK (для клавіатури) ===== */
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 10px;
+    padding: 8px 14px;
+    background: #fff;
+    border: 1px solid var(--color-border);
+    text-decoration: none;
+    color: var(--color-text);
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+/* СТОРІНКА CONTACT.HTML */
+
+/*  1. ДЕМОНСТРАЦІЯ FLOAT  */
+.demo-container {
+    overflow: auto; 
+    background-color: #f9f9f9;
+    border: 1px dashed #999;
+    padding: 15px;
+}
+
+.float-img {
+    width: 140px; /* Задаємо лише ширину. Висота підлаштується автоматично */
+    height: auto;
+    border-radius: 12px; 
+    border: 3px solid #333; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+.float-img-left {
+    float: left;
+    margin: 0 15px 10px 0;
+}
+
+.float-img-right {
+    float: right;
+    margin: 0 0 10px 15px;
+}
+
+.simple-img-center {
+    border: 3px solid #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin: 20px auto;
+    display: block;
+}
+
+/*  2. ФОТОГАЛЕРЕЯ (Накладання з ефектом наведення)  */
+.absolute-stack {
+    position: relative;
+    height: 350px; 
+    margin-top: 30px;
+    background: #fafafa;
+    border: 1px dashed #999;
+}
+
+.stack-img {
+    position: absolute;
+    width: 220px;  
+    height: 300px; 
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
+    
+    /* Анімація: плавна зміна розміру та підняття */
+    transition: transform 0.3s ease, z-index 0s; 
+    cursor: pointer; /* Курсор-рука, щоб було зрозуміло, що на фото можна навести */
+}
+
+.stack-img-1 { left: 10%; top: 25px; z-index: 1; }
+.stack-img-2 { left: 33%; top: 25px; z-index: 2; } 
+.stack-img-3 { left: 56%; top: 25px; z-index: 3; }
+
+/* Ефект при наведенні миші */
+.stack-img:hover {
+    transform: scale(1.15); /* Збільшуємо картинку на 15% */
+    z-index: 10 !important; /* Піднімаємо на найвищий шар, перекриваючи інші */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5); /* Робимо тінь більш виразною */
+}
+/*  3. ФОРМИ ТА ЇХ СТИЛІЗАЦІЯ  */
+.forms-section {
+    background: #fff;
+}
+
+/* Нове меню форм (схоже на головне меню) */
+.forms-nav {
+    margin-bottom: 20px;
+}
+
+.forms-nav_list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--color-border); 
+    padding-bottom: 10px;
+}
+
+.forms-nav_item {
+    padding: 0 20px;
+    border-left: 1px solid var(--color-border); 
+}
+
+.forms-nav_item:last-child {
+    border-right: 1px solid var(--color-border);
+}
+
+.forms-nav_link {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.forms-nav_link:hover {
+    color: var(--color-link);
+}
+/* --- Стилізація завантаження аватара --- */
+.avatar-upload-wrapper {
+    display: flex;
+    justify-content: center; /* Центруємо круг по горизонталі */
+    margin-bottom: 20px;
+}
+
+.avatar-label {
+    font-size: 40px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;           /* Діаметр круга */
+    height: 100px;
+    background-color: #f0f0f0;
+    border: 2px dashed #999; /* Пунктирна рамка, що натякає на завантаження */
+    border-radius: 50%;      /* Робимо круглим */
+    cursor: pointer;         /* Курсор у вигляді руки */
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.avatar-label:hover {
+    background-color: #e0e0e0;
+    border-color: #2a6eb5;   /* Синій колір при наведенні */
+    transform: scale(1.05);  /* Легке збільшення */
+}
+
+.avatar-input {
+    display: none;
+}
+/* Контейнери форм */
+.form-wrapper {
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid #333;
+    background: #e3f2fd; 
+}
+
+.form-wrapper-green {
+    background: #e8f5e9;
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+}
+
+.form-wrapper-yellow {
+    background: #fffde7;
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Сітка для форми реєстрації */
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Стилізація полів вводу */
+.custom-form label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.custom-form input[type="text"],
+.custom-form input[type="email"],
+.custom-form input[type="password"],
+.custom-form input[type="tel"],
+.custom-form input[type="number"],
+.custom-form input[type="url"],
+.custom-form input[type="date"],
+.custom-form select,
+.custom-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #999; /* Проста рамка */
+    font-family: inherit;
+    font-size: 15px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+/* Стан :focus */
+.custom-form input:focus,
+.custom-form select:focus,
+.custom-form textarea:focus {
+    outline: none;
+    border-color: #2a6eb5;
+    box-shadow: 0 0 5px rgba(42, 110, 181, 0.5); 
+}
+
+/* Валідація (:valid та :invalid) */
+.custom-form input:valid:not(:placeholder-shown) {
+    border-color: #28a745;
+}
+
+.custom-form input:invalid:not(:placeholder-shown) {
+    border-color: #dc3545;
+}
+
+/* Група радіокнопок */
+.radio-group {
+    border: none;
+    margin: 15px 0;
+    display: flex;
+    gap: 15px;
+}
+
+.radio-group legend {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+    float: left;
+    width: 100%;
+}
+
+.radio-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+}
+
+/* Кнопки */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn--primary {
+    background-color: #2a6eb5;
+    color: white;
+}
+
+.btn--primary:hover {
+    background-color: #1e528a;
+}
+
+.btn--primary:active {
+    transform: translateY(2px); 
+}
+
+.btn--secondary {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #999;
+}
+
+.btn--secondary:hover {
+    background-color: #e0e0e0;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: flex-end; /* Кнопки притиснуті до правого краю */
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+}
+
+/* Стилізація чекбоксів */
+.checkbox-label {
+    font-weight: normal !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px; /* Відступ від поля "Дата народження" */
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Спеціальна верстка для форми зворотного зв'язку */
+.form-feedback {
+    display: flex;
+    gap: 20px;
+}
+
+.form-feedback_left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-feedback_right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-feedback_right textarea {
+    height: 100%;
+    resize: vertical;
+}
+
+/*  4. БЛОК СОЦМЕРЕЖ  */
+.social-links-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px dashed #999;
+}
+
+.social-links-title {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #333;
+    border-radius: 50%; /* Кружечки */
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/*  5. КНОПКА ВГОРУ  */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #e0e0e0; /* Світло-сірий фон */
+    color: #555; /* Темно-сіра стрілка */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+    z-index: 999;
+    text-decoration: none;
+}
+
+.scroll-top:hover {
+    background-color: #555; /* Темнішає при наведенні */
+    color: #fff;
+    transform: translateY(-5px);
+    border-color: #333;
+}

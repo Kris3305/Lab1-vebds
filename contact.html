@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Контакти та форми зв'язку — сайт Стівена Кінга.">
+    <title>Контакти — Стівен Кінг</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <a href="#main" class="skip-link">Перейти до контенту</a>
+
+    <div class="page">
+
+        <!-- ШАПКА САЙТУ -->
+        <header class="header">
+            <h1 class="header_title">СТІВЕН КІНГ</h1>
+            <nav class="nav" aria-label="Головне меню">
+                <ul class="nav_list">
+                    <li class="nav_item"><a class="nav_link" href="index.html">Головна</a></li>
+                    <li class="nav_item"><a class="nav_link" href="index.html#bio">Біографія</a></li>
+                    <li class="nav_item"><a class="nav_link" href="index.html#works">Твори</a></li>
+                    <li class="nav_item"><a class="nav_link" href="#forms">Форми</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main">
+
+            <!-- СЕКЦІЯ: ФОРМИ ЗВ'ЯЗКУ -->
+            <section class="section demo-float-section">
+                <h2 class="section_title">Цікаві факти</h2>
+                
+                <div class="section_content demo-container">
+                    <!-- Картинки, які обтікає текст (float: left) з круглими рамками -->
+                    <img src="images/books/book1.jpg" alt="Обкладинка книги" class="float-img float-img-left">
+                    <img src="images/books/book2.jpg" alt="Обкладинка книги" class="float-img float-img-right">
+                    
+                    <p>
+                        <strong>Стівен Кінг</strong> написав десятки творів, які стали світовими бестселерами. Його книги, як-от «Воно», «Сяйво» та «Керрі», перекладені понад 40 мовами.
+                    </p>
+                    
+                    <img src="images/books/book3.jpg" alt="Обкладинка книги" class="float-img simple-img-center">
+                    
+                    <p>
+                        Кожен його твір — це занурення у світ, де реальність межує з кошмаром.
+                    </p>
+                </div>
+            </section>
+
+            <hr class="divider">
+
+            <!-- СЕКЦІЯ: ФОТОГАЛЕРЕЯ -->
+            <section class="section demo-absolute-section">
+                <h2 class="section_title">Фотогалерея</h2>
+                <div class="section_content">
+                    
+                    <!-- Контейнер для накладання. Висоту збільшено для великих фото -->
+                    <div class="absolute-stack">
+                        <img src="images/portraits/king1.jpg" alt="Стівен Кінг" class="stack-img stack-img-1">
+                        <img src="images/portraits/king2.jpg" alt="Стівен Кінг" class="stack-img stack-img-2">
+                        <img src="images/portraits/king3.jpg" alt="Стівен Кінг" class="stack-img stack-img-3">
+                    </div>
+                </div>
+            </section>
+            <hr class="divider">
+
+            <!-- СЕКЦІЯ: ФОРМИ ЗВ'ЯЗКУ -->
+            <section id="forms" class="section forms-section">
+                <h2 class="section_title">Форми зв'язку</h2>
+
+                <div class="forms-nav">
+                    <ul class="forms-nav_list">
+                        <li class="forms-nav_item"><a href="#form-register" class="forms-nav_link">Форма реєстрації</a></li>
+                        <li class="forms-nav_item"><a href="#form-login" class="forms-nav_link">Форма входу</a></li>
+                        <li class="forms-nav_item"><a href="#form-feedback" class="forms-nav_link">Зворотний зв'язок</a></li>
+                    </ul>
+                </div>
+
+                <!-- ФОРМА РЕЄСТРАЦІЇ -->
+                <div id="form-register" class="form-wrapper form-wrapper--blue">
+                    <h3 class="form-title">Форма реєстрації</h3>
+                     <form action="#" method="POST" class="custom-form" enctype="multipart/form-data">
+                        
+                        <!-- Блок для завантаження фото профілю -->
+                        <div class="avatar-upload-wrapper">
+                            <label for="avatar-input" class="avatar-label" title="Завантажити фото">
+                                👨‍🦲
+                            </label>
+                            <input type="file" id="avatar-input" name="avatar" class="avatar-input" accept="image/*">
+                        </div>
+
+                        <div class="form-row">
+                            <!-- ЛІВА КОЛОНКА -->
+                            <div class="form-col">
+                                <label for="reg-name">Ім'я:</label>
+                                <input type="text" id="reg-name" name="name" placeholder="Ім'я" required minlength="2">
+                                
+                                <label for="reg-surname">Прізвище:</label>
+                                <input type="text" id="reg-surname" name="surname" placeholder="Прізвище" required>
+                                
+                                <fieldset class="radio-group">
+                                    <legend>Стать:</legend>
+                                    <label><input type="radio" name="gender" value="male" required> Чоловіча</label>
+                                    <label><input type="radio" name="gender" value="female"> Жіноча</label>
+                                </fieldset>
+
+                                <label for="reg-age">Вік:</label>
+                                <input type="number" id="reg-age" name="age" min="1" max="120" value="21">
+                                
+                                <!-- Дата народження перенесена сюди -->
+                                <label for="reg-date">Дата народження:</label>
+                                <input type="date" id="reg-date" name="birthdate">
+                                
+                                <!-- Чекбокс перенесено сюди, під дату народження -->
+                                <label class="checkbox-label" style="margin-top: 15px;">
+                                    <input type="checkbox" name="agree" required> Чи згідні Ви з умовами?
+                                </label>
+                            </div>
+
+                            <!-- ПРАВА КОЛОНКА -->
+                            <div class="form-col">
+                                <label for="reg-country">Країна проживання</label>
+                                <select id="reg-country" name="country">
+                                    <option value="">Оберіть країну проживання</option>
+                                    <option value="ua">Україна</option>
+                                    <option value="us">США</option>
+                                    <option value="uk">Велика Британія</option>
+                                </select>
+
+                                <label for="reg-phone">Номер телефону</label>
+                                <input type="tel" id="reg-phone" name="phone" placeholder="+38(0XX)XXX-XX-XX" pattern="\+38\(0\d{2}\)\d{3}-\d{2}-\d{2}" title="Формат: +38(0XX)XXX-XX-XX">
+                                
+                                <label for="reg-social">Соцмережа</label>
+                                <input type="url" id="reg-social" name="social" placeholder="Посилання на соц.мережу">
+                                
+                                <label for="reg-email">Електронна пошта</label>
+                                <input type="email" id="reg-email" name="email" placeholder="Ел. пошта" required>
+                                
+                                <label for="reg-pass">Пароль</label>
+                                <input type="password" id="reg-pass" name="password" placeholder="Пароль" required minlength="6">
+                            </div>
+                        </div>
+
+                        <!-- Блок кнопок залишається внизу -->
+                        <div class="form-footer" style="justify-content: flex-end;">
+                            <div class="form-buttons">
+                                <button type="submit" class="btn btn--primary">Зареєструватися</button>
+                                <button type="reset" class="btn btn--secondary">Відміна</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- ФОРМА ВХОДУ -->
+                <div id="form-login" class="form-wrapper form-wrapper-green">
+                    <h3 class="form-title">Форма входу</h3>
+                    <form action="#" method="POST" class="custom-form">
+                        <label for="login-name">Логін</label>
+                        <input type="text" id="login-name" name="login" placeholder="Логін" required>
+                        
+                        <label for="login-pass">Пароль</label>
+                        <input type="password" id="login-pass" name="password" placeholder="Пароль" required>
+                        
+                        <button type="submit" class="btn btn--primary">Вхід</button>
+                    </form>
+                </div>
+
+                <!-- ФОРМА ЗВОРОТНОГО ЗВ'ЯЗКУ -->
+                <div id="form-feedback" class="form-wrapper form-wrapper--yellow">
+                    <h3 class="form-title">Форма зворотного зв'язку</h3>
+                    <form action="#" method="POST" class="custom-form form-feedback">
+                        <div class="form-feedback_left">
+                            <label for="fb-name">Ім'я</label>
+                            <input type="text" id="fb-name" name="name" placeholder="Ім'я" required>
+                            
+                            <label for="fb-email">Ел. пошта</label>
+                            <input type="email" id="fb-email" name="email" placeholder="Ел. пошта" required>
+                            
+                            <label for="fb-theme">Тема повідомлення</label>
+                            <select id="fb-theme" name="theme">
+                                <option value="">Оберіть тему</option>
+                                <option value="question">Питання</option>
+                                <option value="review">Відгук</option>
+                            </select>
+                            
+                            <button type="submit" class="btn btn--primary">Відправити</button>
+                        </div>
+                        <div class="form-feedback_right">
+                            <label for="fb-message">Повідомлення</label>
+                            <textarea id="fb-message" name="message" placeholder="Повідомлення" rows="8"></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Соціальні посилання -->
+                <div class="social-links-box">
+                    <span class="social-links-title">Посилання на соц.мережі:</span>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" title="Facebook">Fb</a>
+                        <a href="#" class="social-icon" title="Instagram">In</a>
+                        <a href="#" class="social-icon" title="Twitter">Tw</a>
+                        <a href="#" class="social-icon" title="YouTube">Yt</a>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <!-- ПІДВАЛ -->
+        <footer class="footer">
+            <ul class="footer_list">
+                <li class="footer_item">Copyright &copy; 2026</li>
+                <li class="footer_item">mob. xxx-xx-xx</li>
+                <li class="footer_item">email: xxx@xxx.xx</li>
+                <li class="footer_item">skype: xxxxxxxx</li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <!-- КНОПКА ВГОРУ -->
+    <a href="#" class="scroll-top" title="Вгору">
+        ▲
+    </a>
+
+</body>
+</html>
