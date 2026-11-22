@@ -55,7 +55,8 @@ mark {
     margin: 0 auto;
     background-color: var(--color-bg);
     border: 1px solid var(--color-border);
-    margin-bottom: 60px; /* Відступ знизу для кнопки "вгору" */
+    margin-bottom: 60px;
+    /* Відступ знизу для кнопки "вгору" */
 }
 
 /*  3. ШАПКА  */
@@ -179,7 +180,8 @@ mark {
     text-align: left;
 }
 
-.dates-table th, .dates-table td {
+.dates-table th,
+.dates-table td {
     border: 1px solid var(--color-border);
     padding: 8px 12px;
     text-align: left;
@@ -263,19 +265,21 @@ mark {
 
 /*  1. ДЕМОНСТРАЦІЯ FLOAT  */
 .demo-container {
-    overflow: auto; 
+    overflow: auto;
     background-color: #f9f9f9;
     border: 1px dashed #999;
     padding: 15px;
 }
 
 .float-img {
-    width: 140px; /* Задаємо лише ширину. Висота підлаштується автоматично */
+    width: 140px;
+    /* Задаємо лише ширину. Висота підлаштується автоматично */
     height: auto;
-    border-radius: 12px; 
-    border: 3px solid #333; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    border-radius: 12px;
+    border: 3px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .float-img-left {
     float: left;
     margin: 0 15px 10px 0;
@@ -288,7 +292,7 @@ mark {
 
 .simple-img-center {
     border: 3px solid #333;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 20px auto;
     display: block;
 }
@@ -296,7 +300,7 @@ mark {
 /*  2. ФОТОГАЛЕРЕЯ (Накладання з ефектом наведення)  */
 .absolute-stack {
     position: relative;
-    height: 350px; 
+    height: 350px;
     margin-top: 30px;
     background: #fafafa;
     border: 1px dashed #999;
@@ -304,27 +308,46 @@ mark {
 
 .stack-img {
     position: absolute;
-    width: 220px;  
-    height: 300px; 
+    width: 220px;
+    height: 300px;
     object-fit: cover;
     border: 4px solid #fff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
-    
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
     /* Анімація: плавна зміна розміру та підняття */
-    transition: transform 0.3s ease, z-index 0s; 
-    cursor: pointer; /* Курсор-рука, щоб було зрозуміло, що на фото можна навести */
+    transition: transform 0.3s ease, z-index 0s;
+    cursor: pointer;
+    /* Курсор-рука, щоб було зрозуміло, що на фото можна навести */
 }
 
-.stack-img-1 { left: 10%; top: 25px; z-index: 1; }
-.stack-img-2 { left: 33%; top: 25px; z-index: 2; } 
-.stack-img-3 { left: 56%; top: 25px; z-index: 3; }
+.stack-img-1 {
+    left: 10%;
+    top: 25px;
+    z-index: 1;
+}
+
+.stack-img-2 {
+    left: 33%;
+    top: 25px;
+    z-index: 2;
+}
+
+.stack-img-3 {
+    left: 56%;
+    top: 25px;
+    z-index: 3;
+}
 
 /* Ефект при наведенні миші */
 .stack-img:hover {
-    transform: scale(1.15); /* Збільшуємо картинку на 15% */
-    z-index: 10 !important; /* Піднімаємо на найвищий шар, перекриваючи інші */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5); /* Робимо тінь більш виразною */
+    transform: scale(1.15);
+    /* Збільшуємо картинку на 15% */
+    z-index: 10 !important;
+    /* Піднімаємо на найвищий шар, перекриваючи інші */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    /* Робимо тінь більш виразною */
 }
+
 /*  3. ФОРМИ ТА ЇХ СТИЛІЗАЦІЯ  */
 .forms-section {
     background: #fff;
@@ -340,13 +363,13 @@ mark {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    border-bottom: 1px solid var(--color-border); 
+    border-bottom: 1px solid var(--color-border);
     padding-bottom: 10px;
 }
 
 .forms-nav_item {
     padding: 0 20px;
-    border-left: 1px solid var(--color-border); 
+    border-left: 1px solid var(--color-border);
 }
 
 .forms-nav_item:last-child {
@@ -364,10 +387,12 @@ mark {
 .forms-nav_link:hover {
     color: var(--color-link);
 }
+
 /* --- Стилізація завантаження аватара --- */
 .avatar-upload-wrapper {
     display: flex;
-    justify-content: center; /* Центруємо круг по горизонталі */
+    justify-content: center;
+    /* Центруємо круг по горизонталі */
     margin-bottom: 20px;
 }
 
@@ -376,31 +401,38 @@ mark {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;           /* Діаметр круга */
+    width: 100px;
+    /* Діаметр круга */
     height: 100px;
     background-color: #f0f0f0;
-    border: 2px dashed #999; /* Пунктирна рамка, що натякає на завантаження */
-    border-radius: 50%;      /* Робимо круглим */
-    cursor: pointer;         /* Курсор у вигляді руки */
+    border: 2px dashed #999;
+    /* Пунктирна рамка, що натякає на завантаження */
+    border-radius: 50%;
+    /* Робимо круглим */
+    cursor: pointer;
+    /* Курсор у вигляді руки */
     transition: all 0.3s ease;
     overflow: hidden;
 }
 
 .avatar-label:hover {
     background-color: #e0e0e0;
-    border-color: #2a6eb5;   /* Синій колір при наведенні */
-    transform: scale(1.05);  /* Легке збільшення */
+    border-color: #2a6eb5;
+    /* Синій колір при наведенні */
+    transform: scale(1.05);
+    /* Легке збільшення */
 }
 
 .avatar-input {
     display: none;
 }
+
 /* Контейнери форм */
 .form-wrapper {
     padding: 25px;
     margin-bottom: 30px;
     border: 1px solid #333;
-    background: #e3f2fd; 
+    background: #e3f2fd;
 }
 
 .form-wrapper-green {
@@ -409,7 +441,8 @@ mark {
     margin: 0 auto 30px auto;
 }
 
-.form-wrapper-yellow {
+.form-wrapper-yellow,
+.form-wrapper--yellow {
     background: #fffde7;
 }
 
@@ -452,7 +485,8 @@ mark {
 .custom-form textarea {
     width: 100%;
     padding: 10px 12px;
-    border: 1px solid #999; /* Проста рамка */
+    border: 1px solid #999;
+    /* Проста рамка */
     font-family: inherit;
     font-size: 15px;
     background-color: #fff;
@@ -465,7 +499,7 @@ mark {
 .custom-form textarea:focus {
     outline: none;
     border-color: #2a6eb5;
-    box-shadow: 0 0 5px rgba(42, 110, 181, 0.5); 
+    box-shadow: 0 0 5px rgba(42, 110, 181, 0.5);
 }
 
 /* Валідація (:valid та :invalid) */
@@ -522,7 +556,7 @@ mark {
 }
 
 .btn--primary:active {
-    transform: translateY(2px); 
+    transform: translateY(2px);
 }
 
 .btn--secondary {
@@ -537,7 +571,8 @@ mark {
 
 .form-footer {
     display: flex;
-    justify-content: flex-end; /* Кнопки притиснуті до правого краю */
+    justify-content: flex-end;
+    /* Кнопки притиснуті до правого краю */
     margin-top: 10px;
     border-top: 1px solid #ccc;
     padding-top: 15px;
@@ -551,7 +586,8 @@ mark {
     gap: 8px;
     cursor: pointer;
     font-size: 14px;
-    margin-top: 10px; /* Відступ від поля "Дата народження" */
+    margin-top: 10px;
+    /* Відступ від поля "Дата народження" */
 }
 
 .form-buttons {
@@ -610,7 +646,8 @@ mark {
     width: 40px;
     height: 40px;
     border: 2px solid #333;
-    border-radius: 50%; /* Кружечки */
+    border-radius: 50%;
+    /* Кружечки */
     text-decoration: none;
     color: #333;
     font-weight: bold;
@@ -628,15 +665,17 @@ mark {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #e0e0e0; /* Світло-сірий фон */
-    color: #555; /* Темно-сіра стрілка */
+    background-color: #e0e0e0;
+    /* Світло-сірий фон */
+    color: #555;
+    /* Темно-сіра стрілка */
     width: 50px;
     height: 50px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     border: 1px solid #ccc;
     transition: all 0.3s ease;
     z-index: 999;
@@ -644,8 +683,267 @@ mark {
 }
 
 .scroll-top:hover {
-    background-color: #555; /* Темнішає при наведенні */
+    background-color: #555;
+    /* Темнішає при наведенні */
     color: #fff;
     transform: translateY(-5px);
     border-color: #333;
+}
+
+/* ЛАБОРАТОРНА РОБОТА 3: СТВОРЕННЯ АДАПТИВНОЇ ВЕБ-СТОРІНКИ */
+
+/* 1. ВІДНОСНІ ОДИНИЦІ ВИМІРУ (%, rem, vw) ТА ФУНКЦІЯ clamp() */
+html {
+    font-size: 16px;
+    /* Базовий розмір шрифту (1rem = 16px) */
+}
+
+.page {
+    width: 100%;  /* Відносна ширина у відсотках */
+    max-width: 900px;
+}
+
+.header_title {
+    font-size: clamp(1.25rem, 3vw, 1.5rem); /* Мінімум 1.25rem, бажано 3vw, максимум 1.5rem */
+}
+
+/* 2. CSS FLEXBOX — ГНУЧКИЙ ОДНОВИМІРНИЙ МАКЕТ */
+/* Місце 1: Головне навігаційне меню */
+.nav_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Місце 2: Форма зворотного зв'язку та блок кнопок */
+.form-feedback {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 0.6rem;
+}
+
+/* 3. CSS GRID — ДВОВИМІРНА СІТКА (мінімум в 1 місці) */
+/* Адаптивна сітка для двох колонок форми реєстрації */
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+}
+
+/* Робить обидві колонки форми вузькими, щоб поля вводу не випирали */
+.form-col {
+    min-width: 0;
+}
+
+.custom-form input:not([type="checkbox"]):not([type="radio"]),
+.custom-form select,
+.custom-form textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+/* 4. ГНУЧКІ ЗОБРАЖЕННЯ ТА МЕДІА (max-width, object-fit) */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.stack-img {
+    object-fit: cover;
+    /* Зберігає пропорції фото при зміні розміру */
+    left: 50%;
+    /* Центруємо всі фото відносно середини бокса */
+}
+
+.stack-img-1 {
+    transform: translateX(-115%);
+}
+
+.stack-img-2 {
+    transform: translateX(-50%);
+}
+
+.stack-img-3 {
+    transform: translateX(15%);
+}
+
+.stack-img-1:hover {
+    transform: translateX(-115%) scale(1.15);
+}
+
+.stack-img-2:hover {
+    transform: translateX(-50%) scale(1.15);
+}
+
+.stack-img-3:hover {
+    transform: translateX(15%) scale(1.15);
+}
+
+/* 5. МЕДІА-ЗАПИТИ (@media) — ПІДХІД DESKTOP-FIRST (мінімум 3 рази) */
+
+/* Медіа-запит 1: Планшети (landscape) та малі ноутбуки (до 1024px) */
+@media (max-width: 1024px) {
+    .page {
+        width: 100%;
+    }
+
+    /* Фото в галереї зменшуються і залишаються рівно по центру бокса */
+    .stack-img {
+        width: 190px;
+        height: 260px;
+    }
+}
+
+/* Медіа-запит 2: Планшети (portrait) та великі смартфони (до 768px) */
+@media (max-width: 768px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    .section {
+        padding: 1rem 0.5rem;
+    }
+
+    /* На мобільних меню та списки перелаштовуються (приклад з ЛР3) */
+    .nav_item {
+        padding: 0.25rem 0.6rem;
+    }
+
+    /* Форма зворотного зв'язку стає вертикальною (один під одним) */
+    .form-feedback {
+        flex-direction: column;
+    }
+
+    /* Зменшуємо відступи у формі реєстрації, щоб колонки були вузькими */
+    .form-wrapper {
+        padding: 1rem;
+    }
+
+    .form-row {
+        gap: 0.75rem;
+    }
+
+    /* Фотографії в галереї ще більше напливають одна на одну по центру бокса */
+    .absolute-stack {
+        height: 260px;
+    }
+
+    .stack-img {
+        width: 150px;
+        height: 210px;
+        top: 25px;
+    }
+
+    .stack-img-1 {
+        transform: translateX(-105%);
+    }
+
+    .stack-img-2 {
+        transform: translateX(-50%);
+    }
+
+    .stack-img-3 {
+        transform: translateX(5%);
+    }
+
+    .stack-img-1:hover {
+        transform: translateX(-105%) scale(1.1);
+    }
+
+    .stack-img-2:hover {
+        transform: translateX(-50%) scale(1.1);
+    }
+
+    .stack-img-3:hover {
+        transform: translateX(5%) scale(1.1);
+    }
+
+    /* Портрет на головній сторінці стає по центру */
+    .portrait {
+        float: none;
+        margin: 0 auto 1rem auto;
+    }
+}
+
+/* Медіа-запит 3: Смартфони (до 480px) */
+@media (max-width: 480px) {
+
+    /* На дуже маленьких екранах — одна колонка у Grid (приклад з ЛР3) */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Навігація та футер стають вертикально один під одним */
+    .nav_list,
+    .forms-nav_list,
+    .footer_list {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .nav_item,
+    .nav_item:last-child,
+    .forms-nav_item,
+    .forms-nav_item:last-child,
+    .footer_item {
+        border-left: none;
+        border-right: none;
+    }
+
+    /* Фотогалерея на вузькому телефоні: максимальне напливання фото по центру */
+    .absolute-stack {
+        height: 220px;
+    }
+
+    .stack-img {
+        width: 115px;
+        height: 165px;
+        top: 25px;
+    }
+
+    .stack-img-1 {
+        transform: translateX(-95%);
+    }
+
+    .stack-img-2 {
+        transform: translateX(-50%);
+    }
+
+    .stack-img-3 {
+        transform: translateX(-5%);
+    }
+
+    .stack-img-1:hover {
+        transform: translateX(-95%) scale(1.1);
+    }
+
+    .stack-img-2:hover {
+        transform: translateX(-50%) scale(1.1);
+    }
+
+    .stack-img-3:hover {
+        transform: translateX(-5%) scale(1.1);
+    }
+
+    /* Кнопки форми та соцмережі стають вертикально на всю ширину */
+    .form-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .form-buttons .btn {
+        width: 100%;
+    }
+
+    .social-links-box {
+        flex-direction: column;
+    }
 }
