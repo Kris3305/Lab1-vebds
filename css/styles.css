@@ -37,6 +37,7 @@ img {
 
 p {
     margin-bottom: 12px;
+    text-align: justify;
 }
 
 a {
@@ -699,16 +700,17 @@ html {
 }
 
 .page {
-    width: 100%;  /* Відносна ширина у відсотках */
+    width: 100%;
+    /* Відносна ширина у відсотках */
     max-width: 900px;
 }
 
 .header_title {
-    font-size: clamp(1.25rem, 3vw, 1.5rem); /* Мінімум 1.25rem, бажано 3vw, максимум 1.5rem */
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    /* Мінімум 1.25rem, бажано 3vw, максимум 1.5rem */
 }
 
 /* 2. CSS FLEXBOX — ГНУЧКИЙ ОДНОВИМІРНИЙ МАКЕТ */
-/* Місце 1: Головне навігаційне меню */
 .nav_list {
     display: flex;
     flex-direction: row;
@@ -717,7 +719,6 @@ html {
     flex-wrap: wrap;
 }
 
-/* Місце 2: Форма зворотного зв'язку та блок кнопок */
 .form-feedback {
     display: flex;
     gap: 1.25rem;
@@ -728,7 +729,7 @@ html {
     gap: 0.6rem;
 }
 
-/* 3. CSS GRID — ДВОВИМІРНА СІТКА (мінімум в 1 місці) */
+/* 3. CSS GRID — ДВОВИМІРНА СІТКА */
 /* Адаптивна сітка для двох колонок форми реєстрації */
 .form-row {
     display: grid;
@@ -876,7 +877,7 @@ img {
 /* Медіа-запит 3: Смартфони (до 480px) */
 @media (max-width: 480px) {
 
-    /* На дуже маленьких екранах — одна колонка у Grid (приклад з ЛР3) */
+    /* На дуже маленьких екранах — одна колонка у Grid */
     .form-row {
         grid-template-columns: 1fr;
     }

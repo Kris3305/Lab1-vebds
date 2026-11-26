@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Контакти — Стівен Кінг</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
     <a href="#main" class="skip-link">Перейти до контенту</a>
@@ -31,18 +33,37 @@
             <!-- СЕКЦІЯ: ФОРМИ ЗВ'ЯЗКУ -->
             <section class="section demo-float-section">
                 <h2 class="section_title">Цікаві факти</h2>
-                
+
                 <div class="section_content demo-container">
                     <!-- Картинки, які обтікає текст (float: left) з круглими рамками -->
                     <img src="images/books/book1.jpg" alt="Обкладинка книги" class="float-img float-img-left">
                     <img src="images/books/book2.jpg" alt="Обкладинка книги" class="float-img float-img-right">
-                    
+
                     <p>
-                        <strong>Стівен Кінг</strong> написав десятки творів, які стали світовими бестселерами. Його книги, як-от «Воно», «Сяйво» та «Керрі», перекладені понад 40 мовами.
+                        <strong>Стівен Кінг</strong> — один із найвідоміших письменників сучасності, чий внесок у
+                        світову літературу важко переоцінити. За свою кар’єру він написав понад шістдесят романів і
+                        близько двохсот оповідань, які розійшлися накладом у сотні мільйонів примірників та стабільно
+                        очолюють списки світових бестселерів. Його культові книги, серед яких «Воно», «Сяйво», дебютна
+                        «Керрі», епопея «Темна вежа» та «Протистояння», перекладені більш ніж 40 мовами світу, здобувши
+                        мільйони шанувальників на всіх континентах.
+
+                        Унікальність творчості «Короля жахів» у тому, що головним джерелом страху часто є не містичні
+                        монстри, а темні сторони людської душі. Кінг майстерно змальовує атмосферу провінційних містечок
+                        штату Мен, які приховують давні прокляття або жорстокість звичайних людей. Кожен його твір — це
+                        психологічне занурення у світ, де буденна реальність межує з кошмаром, а героям доводиться
+                        боротися зі своїми страхами, травмами та моральним вибором. Окрім горору, письменник успішно
+                        працює в жанрах фентезі, фантастики, містики та драми.
+
+                        Окремою частиною культурного феномену Кінга є екранізації його творів, за кількістю яких він є
+                        рекордсменом серед сучасних авторів. За його книгами знято десятки фільмів і серіалів, що
+                        увійшли до золотого фонду кінематографа. Зокрема, драма «Втеча з Шоушенка» очолює рейтинг
+                        найкращих фільмів за версією IMDb, а «Зелена миля» вважається кіношедевром. Не менш знаковими
+                        стали горор «Сяйво» Стенлі Кубрика, трилер «Мізері» та дилогія «Воно», яка зібрала рекордну касу
+                        в прокаті, доводячи актуальність творів Кінга для нових поколінь.
                     </p>
-                    
+
                     <img src="images/books/book3.jpg" alt="Обкладинка книги" class="float-img simple-img-center">
-                    
+
                     <p>
                         Кожен його твір — це занурення у світ, де реальність межує з кошмаром.
                     </p>
@@ -55,7 +76,7 @@
             <section class="section demo-absolute-section">
                 <h2 class="section_title">Фотогалерея</h2>
                 <div class="section_content">
-                    
+
                     <!-- Контейнер для накладання. Висоту збільшено для великих фото -->
                     <div class="absolute-stack">
                         <img src="images/portraits/king1.jpg" alt="Стівен Кінг" class="stack-img stack-img-1">
@@ -72,17 +93,19 @@
 
                 <div class="forms-nav">
                     <ul class="forms-nav_list">
-                        <li class="forms-nav_item"><a href="#form-register" class="forms-nav_link">Форма реєстрації</a></li>
+                        <li class="forms-nav_item"><a href="#form-register" class="forms-nav_link">Форма реєстрації</a>
+                        </li>
                         <li class="forms-nav_item"><a href="#form-login" class="forms-nav_link">Форма входу</a></li>
-                        <li class="forms-nav_item"><a href="#form-feedback" class="forms-nav_link">Зворотний зв'язок</a></li>
+                        <li class="forms-nav_item"><a href="#form-feedback" class="forms-nav_link">Зворотний зв'язок</a>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- ФОРМА РЕЄСТРАЦІЇ -->
                 <div id="form-register" class="form-wrapper form-wrapper--blue">
                     <h3 class="form-title">Форма реєстрації</h3>
-                     <form action="#" method="POST" class="custom-form" enctype="multipart/form-data">
-                        
+                    <form action="#" method="POST" class="custom-form" enctype="multipart/form-data">
+
                         <!-- Блок для завантаження фото профілю -->
                         <div class="avatar-upload-wrapper">
                             <label for="avatar-input" class="avatar-label" title="Завантажити фото">
@@ -96,10 +119,10 @@
                             <div class="form-col">
                                 <label for="reg-name">Ім'я:</label>
                                 <input type="text" id="reg-name" name="name" placeholder="Ім'я" required minlength="2">
-                                
+
                                 <label for="reg-surname">Прізвище:</label>
                                 <input type="text" id="reg-surname" name="surname" placeholder="Прізвище" required>
-                                
+
                                 <fieldset class="radio-group">
                                     <legend>Стать:</legend>
                                     <label><input type="radio" name="gender" value="male" required> Чоловіча</label>
@@ -108,11 +131,11 @@
 
                                 <label for="reg-age">Вік:</label>
                                 <input type="number" id="reg-age" name="age" min="1" max="120" value="21">
-                                
+
                                 <!-- Дата народження перенесена сюди -->
                                 <label for="reg-date">Дата народження:</label>
                                 <input type="date" id="reg-date" name="birthdate">
-                                
+
                                 <!-- Чекбокс перенесено сюди, під дату народження -->
                                 <label class="checkbox-label" style="margin-top: 15px;">
                                     <input type="checkbox" name="agree" required> Чи згідні Ви з умовами?
@@ -130,16 +153,18 @@
                                 </select>
 
                                 <label for="reg-phone">Номер телефону</label>
-                                <input type="tel" id="reg-phone" name="phone" placeholder="+38(0XX)XXX-XX-XX" pattern="\+38\(0\d{2}\)\d{3}-\d{2}-\d{2}" title="Формат: +38(0XX)XXX-XX-XX">
-                                
+                                <input type="tel" id="reg-phone" name="phone" placeholder="+38(0XX)XXX-XX-XX"
+                                    pattern="\+38\(0\d{2}\)\d{3}-\d{2}-\d{2}" title="Формат: +38(0XX)XXX-XX-XX">
+
                                 <label for="reg-social">Соцмережа</label>
                                 <input type="url" id="reg-social" name="social" placeholder="Посилання на соц.мережу">
-                                
+
                                 <label for="reg-email">Електронна пошта</label>
                                 <input type="email" id="reg-email" name="email" placeholder="Ел. пошта" required>
-                                
+
                                 <label for="reg-pass">Пароль</label>
-                                <input type="password" id="reg-pass" name="password" placeholder="Пароль" required minlength="6">
+                                <input type="password" id="reg-pass" name="password" placeholder="Пароль" required
+                                    minlength="6">
                             </div>
                         </div>
 
@@ -159,10 +184,10 @@
                     <form action="#" method="POST" class="custom-form">
                         <label for="login-name">Логін</label>
                         <input type="text" id="login-name" name="login" placeholder="Логін" required>
-                        
+
                         <label for="login-pass">Пароль</label>
                         <input type="password" id="login-pass" name="password" placeholder="Пароль" required>
-                        
+
                         <button type="submit" class="btn btn--primary">Вхід</button>
                     </form>
                 </div>
@@ -174,17 +199,17 @@
                         <div class="form-feedback_left">
                             <label for="fb-name">Ім'я</label>
                             <input type="text" id="fb-name" name="name" placeholder="Ім'я" required>
-                            
+
                             <label for="fb-email">Ел. пошта</label>
                             <input type="email" id="fb-email" name="email" placeholder="Ел. пошта" required>
-                            
+
                             <label for="fb-theme">Тема повідомлення</label>
                             <select id="fb-theme" name="theme">
                                 <option value="">Оберіть тему</option>
                                 <option value="question">Питання</option>
                                 <option value="review">Відгук</option>
                             </select>
-                            
+
                             <button type="submit" class="btn btn--primary">Відправити</button>
                         </div>
                         <div class="form-feedback_right">
@@ -226,4 +251,5 @@
     </a>
 
 </body>
+
 </html>
